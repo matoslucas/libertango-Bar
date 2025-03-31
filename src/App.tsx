@@ -44,7 +44,7 @@ function CocktailCard({ cocktail }: { cocktail: Cocktail }) {
             <h4 className="font-medium text-gray-900 dark:text-white mb-2">Ingredients</h4>
             <ul className="space-y-1">
               {cocktail.ingredients.map((ingredient, index) => (
-                <li key={index} className="text-gray-600 dark:text-gray-300 text-base">
+                <li key={index} className="text-gray-600 dark:text-gray-300 text-xl">
                 <i><b>  {ingredient.amount && `${ingredient.amount} `}</b></i>
                 {`${ingredient.unit} `} 
                   {ingredient.name}
@@ -56,7 +56,7 @@ function CocktailCard({ cocktail }: { cocktail: Cocktail }) {
             <h4 className="font-medium text-gray-900 dark:text-white mt-4 mb-2">Instructions</h4>
             <ol className="list-decimal list-inside space-y-1">
               {cocktail.instructions.map((step, index) => (
-                <li key={index} className="text-gray-600 dark:text-gray-300 text-base">{step}</li>
+                <li key={index} className="text-gray-600 dark:text-gray-300 text-xl">{step}</li>
               ))}
             </ol>
 
@@ -65,7 +65,7 @@ function CocktailCard({ cocktail }: { cocktail: Cocktail }) {
                 <h4 className="font-medium text-gray-900 dark:text-white mt-4 mb-2">Garnish</h4>
                 <ul className="space-y-1">
                   {cocktail.garnish.map((item, index) => (
-                    <li key={index} className="text-gray-600 dark:text-gray-300 text-base">{item}</li>
+                    <li key={index} className="text-gray-600 dark:text-gray-300 text-xl">{item}</li>
                   ))}
                 </ul>
               </>
