@@ -8,9 +8,15 @@ type Ingredient = {
   action?: string;
 };
 
+type Preparation = {
+  method: "build" | "stir" | "shake";
+  icon: string;
+};
+
 export type Cocktail = {
   name: string;
   glass: string;
+  preparation: Preparation;
   ingredients: Ingredient[];
   instructions: string[];
   garnish: string[];
@@ -48,7 +54,9 @@ export function CocktailCard({ cocktail }: CocktailCardProps) {
         onClick={handleExpand}
       >
         <div className="flex justify-between items-center">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{cocktail.name}</h3>
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+            {cocktail.name} <span className="ml-2">{cocktail.preparation.icon}</span>
+          </h3>
           <ChevronDown 
             className={`w-5 h-5 text-gray-500 dark:text-gray-400 transition-transform ${isExpanded ? 'transform rotate-180' : ''}`}
           />

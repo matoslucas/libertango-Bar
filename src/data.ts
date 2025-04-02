@@ -1,7 +1,10 @@
-export const cocktails = [
+import { Cocktail } from './components/CocktailCard';
+
+export const cocktails: Cocktail[] = [
   {
     name: "Aperol Spritz",
     glass: "Wine glass",
+    preparation: { method: "build" as const, icon: "🥃" },
     ingredients: [
       { name: "Aperol", amount: "0.5", unit: "oz" },
       { name: "Prosecco", amount: "2.0", unit: "oz" },
@@ -19,6 +22,7 @@ export const cocktails = [
   {
     name: "Saint Germain Spritz",
     glass: "Wine glass",
+    preparation: { method: "build" as const, icon: "🥃" },
     ingredients: [
       { name: "Saint Germain (Elderflower Liqueur)", amount: "0.5", unit: "oz" },
       { name: "Prosecco", amount: "2.0", unit: "oz" },
@@ -35,6 +39,7 @@ export const cocktails = [
   {
     name: "Limoncello Spritz",
     glass: "Wine glass",
+    preparation: { method: "build" as const, icon: "🥃" },
     ingredients: [
       { name: "Limoncello", amount: "0.5", unit: "oz" },
       { name: "Prosecco", amount: "2.0", unit: "oz" },
@@ -48,11 +53,11 @@ export const cocktails = [
       "Garnish with lemon slice or basil",
     ],
     garnish: ["Lemon slice or basil"],
-  }
-,  
+  },
   {
     name: "Manhattan",
     glass: "Martini glass or coupe",
+    preparation: { method: "stir" as const, icon: "🥣" },
     ingredients: [
       { name: "Rye whiskey", amount: "1.5", unit: "oz" },
       { name: "Sweet vermouth", amount: "1.0", unit: "oz" },
@@ -70,6 +75,7 @@ export const cocktails = [
   {
     name: "Old Fashioned",
     glass: "Rocks glass",
+    preparation: { method: "build" as const, icon: "🥃" },
     ingredients: [
       { name: "Bourbon or rye whiskey", amount: "1.5", unit: "oz" },
       { name: "Sugar cube", amount: "1", unit: "cube" },
@@ -87,6 +93,7 @@ export const cocktails = [
   {
     name: "Margarita",
     glass: "Margarita glass",
+    preparation: { method: "shake" as const, icon: "👋" },
     ingredients: [
       { name: "Tequila", amount: "1.5", unit: "oz" },
       { name: "Triple sec", amount: "1.0", unit: "oz" },
@@ -103,6 +110,7 @@ export const cocktails = [
   {
     name: "Negroni",
     glass: "Rocks glass",
+    preparation: { method: "build" as const, icon: "🥃" },
     ingredients: [
       { name: "Gin", amount: "0.75", unit: "oz" },
       { name: "Sweet vermouth", amount: "0.75", unit: "oz" },
@@ -118,6 +126,7 @@ export const cocktails = [
   {
     name: "Negroni Porteño",
     glass: "Rocks glass",
+    preparation: { method: "build" as const, icon: "🥃" },
     ingredients: [
       { "name": "Gin", "amount": "0.75", "unit": "oz" },
       { "name": "Sweet vermouth", "amount": "0.75", "unit": "oz" },
@@ -133,11 +142,14 @@ export const cocktails = [
   {
     name: "Espresso Martini",
     glass: "Martini glass",
+    preparation: { method: "shake" as const, icon: "👋" },
     ingredients: [
+      
       { name: "Vodka", amount: "1.5", unit: "oz" },
+      { name: "🍯 Simple syrup", amount: "0.5", unit: "oz" },
       { name: "Coffee liqueur", amount: "1.0", unit: "oz" },
       { name: "Espresso", amount: "1.0", unit: "oz" },
-      { name: "Simple syrup", amount: "0.5", unit: "oz" },
+     
     ],
     instructions: [
       "Combine vodka, coffee liqueur, espresso, and simple syrup in a shaker with ice",
@@ -150,6 +162,7 @@ export const cocktails = [
   {
     name: "Moscow Mule",
     glass: "Copper mug",
+    preparation: { method: "build" as const, icon: "🥃" },
     ingredients: [
       { name: "Vodka", amount: "1.5", unit: "oz" },
       { name: "🍋‍🟩 Lime juice", amount: "0.5", unit: "oz" },
@@ -167,10 +180,11 @@ export const cocktails = [
   {
     name: "El Cayman",
     glass: "Moscow mule glass",
+    preparation: { method: "build" as const, icon: "🥃" },
     ingredients: [
       { name: "Mint leaves", amount: "5", unit: "leaves", action: "muddled" },
-      { name: "🍋‍🟩 Lime juice", amount: "1.0", unit: "oz" },
       { name: "🍯 Simple syrup", amount: "0.5", unit: "oz" },
+      { name: "🍋‍🟩 Lime juice", amount: "1.0", unit: "oz" },
       { name: "🍺🫚 Ginger beer", amount: "", unit: "", action: "top off" },
       { name: "Sprite", amount: "", unit: "", action: "top off" },
     ],
@@ -185,13 +199,14 @@ export const cocktails = [
   {
     name: "El Condor",
     glass: "Big rock glass",
+    preparation: { method: "shake" as const, icon: "👋" },
     ingredients: [
       { name: "🫐 Blackberries", amount: "2-4", unit: "" },
       { name: "Raspberry", amount: "", unit: "dash" },
       { name: "Rhubarb bitters", amount: "1", unit: "dash" },
+      { name: "🍯 Simple syrup", amount: "0.5", unit: "oz" },
       { name: "🍋‍🟩 Lime juice", amount: "1.0", unit: "oz" },
       { name: "Grapefruit juice", amount: "1.0", unit: "oz" },
-      { name: "🍯 Simple syrup", amount: "0.5", unit: "oz" },
       { name: "Sprite", amount: "", unit: "", action: "top off" },
     ],
     instructions: [
@@ -206,6 +221,7 @@ export const cocktails = [
   {
     name: "El Puma",
     glass: "Big rock glass",
+    preparation: { method: "shake" as const, icon: "👋" },
     ingredients: [
       { name: "Passion fruit", amount: "2.0", unit: "oz" },
       { name: "🥥 Coconut syrup", amount: "1.0", unit: "oz" },
@@ -224,6 +240,7 @@ export const cocktails = [
   {
     name: "Caipirinha",
     glass: "Big rock glass",
+    preparation: { method: "build" as const, icon: "🥃" },
     ingredients: [
       { name: "🍋‍🟩 Lime wedges", amount: "4", unit: "", action: "muddled" },
       { name: "🍯 Simple syrup", amount: "1.0", unit: "oz" },
@@ -241,6 +258,7 @@ export const cocktails = [
   {
     name: "Carajillo",
     glass: "Big rock glass",
+    preparation: { method: "shake" as const, icon: "👋" },
     ingredients: [
       { name: "Licor 43", amount: "1.0", unit: "oz" },
       { name: "☕ Espresso", amount: "1.0", unit: "oz" },
@@ -255,6 +273,7 @@ export const cocktails = [
   {
     name: "Asadero en fuego",
     glass: "Small rock glass",
+    preparation: { method: "build" as const, icon: "🥃" },
     ingredients: [
       { name: "Porter's rye whiskey", amount: "1.5", unit: "oz" },
       { name: "Sugar cube", amount: "1", unit: "" },
@@ -268,6 +287,7 @@ export const cocktails = [
   {
     name: "Sangria Sin Alcohol",
     glass: "Pint glass",
+    preparation: { method: "build" as const, icon: "🥃" },
     ingredients: [
       { name: "Fruit salad", amount: "4.0", unit: "oz" },
       { name: "🍯 Simple syrup", amount: "1.0", unit: "oz" },
@@ -283,6 +303,7 @@ export const cocktails = [
   {
     name: "Pica piña",
     glass: "Hurricane glass",
+    preparation: { method: "build" as const, icon: "🥃" },
     ingredients: [
       { name: "🍎 Apple juice", amount: "3.0", unit: "oz" },
       { name: "🍍 Pineapple juice", amount: "2.0", unit: "oz" },
@@ -296,6 +317,7 @@ export const cocktails = [
   {
     name: "Campari Spritz",
     glass: "Wine glass",
+    preparation: { method: "build" as const, icon: "🥃" },
     ingredients: [
       { name: "Campari", amount: "1.5", unit: "oz" },
       { name: "🍊 Orange juice", amount: "1.5", unit: "oz" },
@@ -307,6 +329,7 @@ export const cocktails = [
   {
     name: "The OG",
     glass: "Big rock glass",
+    preparation: { method: "build" as const, icon: "🥃" },
     ingredients: [
       { name: "🍋‍🟩 Lime wedges", amount: "4", unit: "", action: "muddled" },
       { name: "🫐 Blackberries", amount: "2-4", unit: "" },
@@ -325,12 +348,13 @@ export const cocktails = [
   {
     name: "Los Andes",
     glass: "Small rock glass",
+    preparation: { method: "shake" as const, icon: "👋" },
     ingredients: [
       { name: "Amaretto Disaromo", amount: "0.75", unit: "oz" },
       { name: "Porter's rye whiskey", amount: "1.5", unit: "oz" },
       { name: "🥚 Egg white", amount: "1", unit: "" },
-      { name: "🍋 Lemon juice", amount: "1.0", unit: "oz" },
       { name: "🍯 Simple syrup", amount: "1.0", unit: "oz" },
+      { name: "🍋 Lemon juice", amount: "1.0", unit: "oz" },
       { name: "🍊 Orange juice", amount: "", unit: "squirt" },
     ],
     instructions: [
@@ -347,6 +371,7 @@ export const cocktails = [
   {
     name: "Margarita al Humo",
     glass: "Small rock glass",
+    preparation: { method: "shake" as const, icon: "👋" },
     ingredients: [
       { name: "Lunazul blanco", amount: "1.5", unit: "oz" },
       { name: "Bozal mezcal", amount: "0.5", unit: "oz" },
@@ -365,6 +390,7 @@ export const cocktails = [
   {
     name: "Margarita Elevada",
     glass: "Small rock glass",
+    preparation: { method: "shake" as const, icon: "👋" },
     ingredients: [
       { name: "Lunazul reposado", amount: "1.5", unit: "oz" },
       { name: "Cointreau", amount: "1.0", unit: "oz" },
@@ -382,6 +408,7 @@ export const cocktails = [
   {
     name: "Sangria de mama",
     glass: "Pint glass",
+    preparation: { method: "build" as const, icon: "🥃" },
     ingredients: [
       { name: "Fruit salad", amount: "4.0", unit: "oz" },
       { name: "Bacardi", amount: "1.0", unit: "oz" },
@@ -399,6 +426,7 @@ export const cocktails = [
   {
     name: "Un Manhattan",
     glass: "Coupe glass",
+    preparation: { method: "stir" as const, icon: "🥣" },
     ingredients: [
       { name: "Elijah Craig Bourbon", amount: "1.5", unit: "oz" },
       { name: "Sweet Vermouth", amount: "0.5", unit: "oz" },
@@ -413,11 +441,12 @@ export const cocktails = [
   {
     name: "La Copa",
     glass: "Small rock glass",
+    preparation: { method: "shake" as const, icon: "👋" },
     ingredients: [
       { name: "Pisco reservado", amount: "1.5", unit: "oz" },
+      { name: "🍯 Simple syrup", amount: "1.0", unit: "oz" },
       { name: "🍋‍🟩 Lime juice", amount: "0.5", unit: "oz" },
       { name: "🍋 Lemon juice", amount: "0.5", unit: "oz" },
-      { name: "🍯 Simple syrup", amount: "1.0", unit: "oz" },
       { name: "🥚 Egg white", amount: "1", unit: "" },
     ],
     instructions: [
