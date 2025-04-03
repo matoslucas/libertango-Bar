@@ -1,26 +1,6 @@
 import { useState } from 'react';
 import { GlassWater, ChevronDown } from 'lucide-react';
-
-type Ingredient = {
-  name: string;
-  amount: string;
-  unit: string;
-  action?: string;
-};
-
-type Preparation = {
-  method: "build" | "stir" | "shake";
-  icon: string;
-};
-
-export type Cocktail = {
-  name: string;
-  glass: string;
-  preparation: Preparation;
-  ingredients: Ingredient[];
-  instructions: string[];
-  garnish: string[];
-};
+import { Cocktail } from '../types.ts';
 
 interface CocktailCardProps {
   cocktail: Cocktail;

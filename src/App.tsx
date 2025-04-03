@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { cocktails } from './data';
 import { CocktailCard } from './components/CocktailCard';
 import { SearchBar } from './components/SearchBar';
