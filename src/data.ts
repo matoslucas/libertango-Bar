@@ -301,9 +301,9 @@ export const cocktails: Cocktail[] = [
     glass: "Wine glass",
     preparation: { method: "build", icon: "🥃" },
     ingredients: [
-      { name: "Campari", amount: "1.5", unit: "oz" },
-      { name: "🍊 Orange juice", amount: "1.5", unit: "oz" },
-      { name: "Prosecco", amount: "4.0", unit: "oz" },
+      { name: "Campari", amount: "2", unit: "oz" },
+      { name: "🍊 Orange juice", amount: "1", unit: "oz" },
+      { name: "Prosecco", amount: "3", unit: "oz" },
     ],
     instructions: ["Build in glass over ice", "Stir gently"],
     garnish: ["Dehydrated 🍊 orange"],
