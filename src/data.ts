@@ -2,18 +2,30 @@ import { Cocktail } from './types.ts';
 
 export const cocktails: Cocktail[] = [
   {
+    name: "Campari Spritz",
+    glass: "Wine glass",
+    preparation: { method: "build", icon: "🥃" },
+    ingredients: [
+      { name: "Campari", amount: "1.5", unit: "oz" },
+      { name: "Prosecco", amount: "4", unit: "oz" },
+      { name: "🍊 Orange juice", amount: "1", unit: "oz" },
+    ],
+    instructions: ["Build in glass over ice", "Stir gently"],
+    garnish: ["Dehydrated 🍊 orange"],
+  },
+  {
     name: "Aperol Spritz",
     glass: "Wine glass",
     preparation: { method: "build", icon: "🥃" },
     ingredients: [
-      { name: "Aperol", amount: "0.5", unit: "oz" },
-      { name: "Prosecco", amount: "2.0", unit: "oz" },
-      { name: "Soda Water", amount: "1.0", unit: "oz" },
+      { name: "Aperol", amount: "1.5", unit: "oz" },
+      { name: "Prosecco", amount: "4", unit: "oz" },
+      { name: "🍊 Orange juice", amount: "1", unit: "oz" },
     ],
     instructions: [
       "Fill a wine glass with ice",
       "Add Aperol",
-      "Top with Prosecco and soda water",
+      "Top with Prosecco and orange juice",
       "Stir gently",
       "Garnish with an orange slice",
     ],
@@ -24,15 +36,14 @@ export const cocktails: Cocktail[] = [
     glass: "Wine glass",
     preparation: { method: "build", icon: "🥃" },
     ingredients: [
-      { name: "Saint Germain (Elderflower Liqueur)", amount: "0.5", unit: "oz" },
-      { name: "Prosecco", amount: "2.0", unit: "oz" },
-      { name: "Soda Water", amount: "2.0", unit: "oz" },
+      { name: "Saint Germain (Elderflower Liqueur)", amount: "1.5", unit: "oz" },
+      { name: "Prosecco", amount: "4", unit: "oz" },
+      { name: "🍊 Orange juice", amount: "1", unit: "oz" },
     ],
     instructions: [
       "Add Saint Germain to a glass with ice",
-      "Pour in Prosecco and soda water",
+      "Pour in Prosecco and orange juice",
       "Stir gently",
-      "Garnish with lemon twist or mint",
     ],
     garnish: ["Lemon twist or mint sprig"],
   },
@@ -41,8 +52,8 @@ export const cocktails: Cocktail[] = [
     glass: "Wine glass",
     preparation: { method: "build", icon: "🥃" },
     ingredients: [
-      { name: "Limoncello", amount: "0.5", unit: "oz" },
-      { name: "Prosecco", amount: "2.0", unit: "oz" },
+      { name: "Limoncello", amount: "1.5", unit: "oz" },
+      { name: "Prosecco", amount: "4", unit: "oz" },
       { name: "Soda Water", amount: "1.0", unit: "oz" },
     ],
     instructions: [
@@ -50,25 +61,22 @@ export const cocktails: Cocktail[] = [
       "Pour in Limoncello",
       "Add Prosecco and soda water",
       "Stir gently",
-      "Garnish with lemon slice or basil",
     ],
     garnish: ["Lemon slice or basil"],
   },
   {
     name: "Old Fashioned",
     glass: "Rocks glass",
-    preparation: { method: "build", icon: "🥃" },
+    preparation: { method: "build", icon: "🥣" },
     ingredients: [
       { name: "Bourbon or rye whiskey", amount: "1.5", unit: "oz" },
-      { name: "Sugar cube", amount: "1", unit: "cube" },
-      { name: "Angostura bitters", amount: "2", unit: "dashes" },
-      { name: "Water", amount: "1", unit: "splash" },
+      { name: "Demerara syrup", amount: "0.25", unit: "oz" },
+      { name: "Angostura bitters", amount: "2-3", unit: "dashes" },
     ],
     instructions: [
-      "Muddle sugar cube with bitters and water in a glass",
+      "Add the Angostura bitters and Demerara syrup to a rocks glass",
       "Add ice and whiskey",
       "Stir gently",
-      "Garnish with an orange peel and cherry",
     ],
     garnish: ["Orange peel", "Cherry"],
   },
@@ -110,12 +118,12 @@ export const cocktails: Cocktail[] = [
     glass: "Rocks glass",
     preparation: { method: "build", icon: "🥃" },
     ingredients: [
-      { "name": "Gin", "amount": "0.75", "unit": "oz" },
-      { "name": "Sweet vermouth", "amount": "0.75", "unit": "oz" },
-      { "name": "Fernet", "amount": "0.75", "unit": "oz" }
+      { name: "Campari", amount: "0.75", unit: "oz" },
+      { name: "Sweet vermouth", amount: "0.75", unit: "oz" },
+      { name: "Fernet", amount: "0.75", unit: "oz" }
     ],
     instructions: [
-      "Combine gin, sweet vermouth, and fernet in a glass with ice",
+      "Combine Campari, sweet vermouth, and fernet in a glass with ice",
       "Stir gently",
       "Garnish with an orange peel"
     ],
@@ -165,10 +173,10 @@ export const cocktails: Cocktail[] = [
     preparation: { method: "build", icon: "🥃" },
     ingredients: [
       { name: "Mint leaves", amount: "5", unit: "leaves", action: "muddled" },
-      { name: "🍯 Simple syrup", amount: "0.5", unit: "oz" },
+      { name: "🍯 Simple syrup", amount: "1", unit: "oz" },
       { name: "🍋‍🟩 Lime juice", amount: "1.0", unit: "oz" },
-      { name: "🍺🫚 Ginger beer", amount: "", unit: "", action: "top off" },
-      { name: "Sprite", amount: "", unit: "", action: "top off" },
+      { name: "🍺🫚 Ginger beer", amount: "4", unit: "oz", action: "top off" },
+      { name: "Sprite", amount: "4", unit: "oz", action: "top off" },
     ],
     instructions: [
       "Muddle mint leaves in glass",
@@ -296,18 +304,7 @@ export const cocktails: Cocktail[] = [
     instructions: ["Combine all ingredients in glass", "Stir well"],
     garnish: ["🌶️ Tajin rim", "Regular straw"],
   },
-  {
-    name: "Campari Spritz",
-    glass: "Wine glass",
-    preparation: { method: "build", icon: "🥃" },
-    ingredients: [
-      { name: "Campari", amount: "2", unit: "oz" },
-      { name: "🍊 Orange juice", amount: "1", unit: "oz" },
-      { name: "Prosecco", amount: "3", unit: "oz" },
-    ],
-    instructions: ["Build in glass over ice", "Stir gently"],
-    garnish: ["Dehydrated 🍊 orange"],
-  },
+ 
   {
     name: "The OG",
     glass: "Big rock glass",
@@ -419,7 +416,6 @@ export const cocktails: Cocktail[] = [
       "Add whiskey, sweet vermouth, and bitters",
       "Stir well for 30 seconds",
       "Strain into a chilled glass",
-      "Garnish with a cherry or orange peel",
     ],
     garnish: ["Maraschino cherry", "Orange peel"],
   },
